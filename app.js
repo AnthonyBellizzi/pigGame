@@ -9,7 +9,7 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer, gamePlaying, diceLast, cap;
+var scores, roundScore, activePlayer, gamePlaying, diceLast;
 
 init();
 
@@ -56,7 +56,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
     //Check for win
 
-    if (scores[activePlayer] >= cap) {
+    if (scores[activePlayer] >= 100) {
       gamePlaying = false;
       document.querySelector('#name-' + activePlayer).textContent = 'WINNER!';
       document.querySelector('.dice').style.disply = 'none';
